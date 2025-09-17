@@ -1,0 +1,553 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
+@font-face {
+  font-family: "Futura Hv";
+  src: url("fonts/Futura Heavy font.ttf") format("truetype");
+  font-display: swap; /* improves loading behavior */
+}
+
+@font-face {
+  font-family: "Futura Md";
+  src: url("fonts/futura medium bt.ttf") format("truetype");
+  font-display: swap; /* improves loading behavior */
+}
+
+@font-face {
+  font-family: "Beni Black";
+  src: url("fonts/BeniBlack.ttf") format("truetype");
+  font-display: swap; /* improves loading behavior */
+}
+
+@font-face {
+  font-family: "Beni Bold";
+  src: url("fonts/BeniBold.ttf") format("truetype");
+  font-display: swap; /* improves loading behavior */
+}
+
+@font-face {
+  font-family: "Impact";
+  src: url("fonts/Impact.ttf") format("truetype");
+  font-display: swap; /* improves loading behavior */
+}
+
+:root {
+  --type-xxs: 0.236rem; /* ~3.78px  */
+  --type-xs: 0.382rem; /* ~6.11px  */
+  --type-sm: 0.618rem; /* ~9.89px  */
+  --type-base: 1rem; /* 16px    */
+  --type-lg: 1.618rem; /* ~25.89px*/
+  --type-xl: 2.618rem; /* ~41.89px*/
+  --type-2xl: 4.236rem; /* ~67.78px*/
+  --type-3xl: 6.854rem; /* ~109.66px*/
+  --type-4xl: 11.09rem; /* ~177.44px*/
+
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.45;
+
+  --base-white: #fffbf7;
+}
+
+body {
+  font-size: var(--type-base);
+  font-family: "Merriweather", serif;
+  background-color: #ecdfcc;
+}
+
+header {
+  background: url("images/dpwh 1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2000;
+  background: url("images/Rectangle 10.svg") no-repeat center/cover;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content p {
+  font-size: var(--type-lg);
+  color: var(--base-white);
+  z-index: 1222000;
+}
+
+header .hero-content::before {
+  content: "";
+  opacity: 93%;
+  position: absolute;
+  background: url("images/Frame 2.png") no-repeat center/contain;
+  left: 0;
+  bottom: 0;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 65em;
+  transform: translate(0%, 4%);
+}
+
+.hero-content .ph {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  top: 20px;
+  mix-blend-mode: difference;
+}
+
+.hero-content .stripes {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  mix-blend-mode: hard-light;
+  z-index: 2000;
+}
+
+header .hero-content::after {
+  content: "";
+  opacity: 85%;
+  position: absolute;
+  background: url("images/Frame 1.png") no-repeat center/contain;
+  right: 0;
+  bottom: 0;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 46em;
+  transform: translate(0%, 4%);
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box; /* Include padding in height calculation */
+  overflow: hidden;
+  padding-bottom: 3.3em;
+}
+header h1 {
+  font-size: var(--type-4xl);
+  font-family: "Beni Black";
+  text-transform: uppercase;
+  color: var(--base-white);
+  text-align: center;
+  line-height: 0.8;
+  max-width: 1060px;
+  position: relative;
+  z-index: 1000;
+  display: inline-block; /* shrink-wrap around the text */
+}
+
+.hero-content h1::before,
+.hero-content h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 13%;
+  background: url("images/santanas with effect.png") no-repeat center/contain;
+  pointer-events: none;
+}
+
+.hero-content h1::before {
+  left: 0; /* stick to left edge of the text box */
+  transform: translate(13%, -62%) rotate(-20deg);
+}
+
+.hero-content h1::after {
+  right: 0; /* stick to right edge of the text box */
+  transform: translate(-13%, -62%) scaleX(-1) rotate(-20deg);
+}
+
+nav {
+  background-color: #0d0800;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  max-width: 80em;
+  margin: auto;
+  justify-content: space-around;
+}
+nav a {
+  text-transform: uppercase;
+  font-size: var(--type-lg);
+  font-family: "Futura Md";
+  font-weight: 400;
+  color: var(--base-white);
+  text-decoration: none;
+}
+
+.preface {
+  background-color: #1a1816;
+  color: var(--base-white);
+  overflow: hidden;
+}
+
+.preface .content {
+  max-width: 80em;
+  padding: 10em 0;
+  margin: auto;
+}
+
+.preface h1 {
+  font-family: "Impact";
+  font-size: var(--type-3xl);
+  line-height: var(--leading-tight);
+}
+
+.preface h2 {
+  font-family: "Futura Md";
+  font-size: var(--type-lg);
+  margin-top: 0.5em;
+  max-width: 20em;
+}
+.preface h2 > span {
+  font-family: "Futura Hv";
+}
+
+.preface p {
+  line-height: 2;
+  max-width: 45em;
+  padding-top: 20em;
+  margin-left: auto;
+  position: relative;
+}
+
+.preface p::after {
+  content: "";
+  position: absolute;
+  top: -10em;
+  right: -10%;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 80%;
+  background: url("images/flood gallery 1.png") no-repeat center/contain;
+}
+
+.preface .source {
+  display: block;
+  margin-top: 1em;
+  font-size: var(--type-sm);
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.infographic .quote {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.infographic .quote blockquote {
+  font-family: "Impact";
+  font-size: var(--type-2xl);
+  position: relative;
+  line-height: var(--leading-tight);
+}
+.infographic .quote blockquote::before {
+  content: "";
+  position: absolute;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 7%;
+  left: -10%;
+  background: url("/images/quote mark.svg") no-repeat center/contain;
+}
+
+.infographic {
+  padding: 7em 0;
+  display: grid;
+  column-gap: 2em;
+  grid-template-columns: 2.2fr 3fr;
+}
+
+.infographic .content {
+  grid-column: 2 / -1;
+  grid-row: 3;
+}
+.infographic .summary {
+  grid-column: 2 / -1;
+  grid-row: 4;
+  display: grid;
+  grid-template-columns: max-content 1fr; /* image column + content column */
+  grid-template-rows: auto auto; /* card row + paragraph row */
+  max-width: 47em;
+}
+
+.infographic .content p {
+  margin-top: 1.2em;
+  line-height: 2;
+  max-width: 47em;
+}
+
+.infographic .summary .card h3 {
+  font-size: var(--type-lg);
+  font-family: "Futura Hv";
+  line-height: 1;
+}
+
+.infographic .summary .card > div p {
+  font-family: "Futura Md";
+}
+
+.infographic .summary img {
+  grid-column: 1;
+  grid-row: 1 / 3; /* span both rows */
+}
+.infographic .summary .card {
+  margin-top: 2em;
+  background-color: var(--base-white);
+  padding: 1.5em;
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.infographic .summary > p {
+  grid-column: 2;
+  grid-row: 2;
+  line-height: 2;
+  margin-top: 1em;
+}
+
+.infographic .quote {
+  grid-column: 2;
+  padding: 2em 0em;
+}
+.infographic .quote,
+.infographic .bg {
+  grid-row: 2 / 3;
+}
+.infographic .bg {
+  align-items: start;
+  background-color: white;
+  grid-column: 1 /-1;
+  z-index: -100;
+}
+
+.infographic .profile {
+  background: transparent;
+  grid-row: 1 / 4;
+  grid-column: 1;
+  width: 30em;
+  margin-top: -1em;
+  margin-left: auto;
+  align-self: start;
+}
+
+.infographic .profile h3 {
+  font-size: var(--type-xl);
+  text-align: center;
+}
+
+.infographic .profile ul li {
+  list-style-type: none;
+}
+
+.infographic .profile ul {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  padding: 0;
+}
+
+.action {
+  background-color: #1a1816;
+  color: var(--base-white);
+  padding: 10em 0;
+}
+.action .head {
+  display: grid;
+  place-items: center;
+}
+.action .head h1 {
+  font-size: var(--type-3xl);
+  font-family: "Impact";
+  line-height: 1.1;
+}
+.action .head h2 {
+  font-size: var(--type-lg);
+}
+
+.action .head .display .sub {
+  display: flex;
+  font-family: "Futura Md";
+  justify-content: space-between;
+}
+
+.action .head .display {
+  width: fit-content;
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1 /3;
+  align-self: self-start;
+}
+.action .head img {
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1/4;
+  align-self: self-end;
+  padding-top: 5em;
+  width: 66em;
+}
+.action .intro {
+  padding-top: 1em;
+  max-width: 40em;
+  margin: auto;
+  line-height: 2;
+}
+
+.action .action-1 h1,
+.action .action-2 h1,
+.action .action-3 h1 {
+  font-size: var(--type-xl);
+  font-family: "Impact";
+  line-height: var(--leading-tight);
+  margin-bottom: 0.5em;
+  max-width: 22em;
+}
+
+.action .action-2 {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.actions {
+  padding-top: 7em;
+  display: flex;
+  flex-direction: column;
+  gap: 6em;
+}
+
+.action .action-1,
+.action .action-2,
+.action .action-3 {
+  margin: auto;
+  max-width: 60em;
+}
+
+.action .action-1 p,
+.action .action-2 p,
+.action .action-3 p {
+  line-height: 2;
+}
+
+.discaya {
+  padding: 12em 0;
+  background-color: var(--base-white);
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+}
+.discaya .bg {
+  background-color: #ecdfcc;
+  align-items: start;
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.discaya .head {
+  padding-top: 5em;
+  max-width: 66em;
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1/3;
+}
+
+.discaya h1 {
+  font-family: "Impact";
+  /* padding-top: 1em;
+    padding-bottom: 4em; */
+  font-size: var(--type-2xl);
+  max-width: 10em;
+  line-height: var(--leading-tight);
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+.discaya h2 {
+  font-size: var(--type-base);
+  flex: 1;
+  text-align: right;
+  font-family: "Futura Hv";
+}
+
+.discaya .card {
+  background-color: #ece1cc;
+  padding: 1.5em;
+}
+
+.discaya .card > div {
+  font-family: "Futura Hv";
+}
+
+.discaya .card > div h3 {
+  font-size: var(--type-lg);
+}
+
+.discaya .display {
+  display: flex;
+  gap: 1em;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 2em;
+  align-items: end;
+}
+
+.discaya .content {
+  padding-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2em;
+  max-width: 66em;
+  margin: auto;
+  align-items: start;
+}
+
+.discaya .content p {
+  line-height: 2;
+}
+
+.preface {
+  position: relative;
+  z-index: 100;
+}
+.preface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: contain;
+  background: url("images/flood bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+button {
+  background-color: #ee4040;
+  font-family: "Futura Md";
+  border: none;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 99999;
+  padding: 0.5em;
+  cursor: pointer;
+  color: #ecdfcc;
+  margin: 2em;
+  transition: transform 0.15s ease;
+  box-shadow: -1px 9px 36px -9px rgba(0, 0, 0, 0.41);
+}
+
+button:active {
+  transform: scale(0.95);
+  background-color: #e65f5f;
+}
