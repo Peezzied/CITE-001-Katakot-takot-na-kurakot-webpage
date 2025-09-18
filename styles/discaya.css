@@ -1,0 +1,73 @@
+.discaya {
+  padding: 12em 0;
+  background-color: var(--base-white);
+  grid-template-rows: 1fr 1fr;
+  display: grid;
+}
+.discaya .bg {
+  background-color: #ecdfcc;
+  align-items: start;
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.discaya .head {
+  padding-top: 5em;
+  max-width: 66em;
+  margin: auto;
+  grid-column: 1;
+  grid-row: 1/3;
+}
+
+.discaya h1 {
+  font-family: "Impact";
+  /* padding-top: 1em;
+    padding-bottom: 4em; */
+  font-size: var(--type-2xl);
+  max-width: 10em;
+  line-height: var(--leading-tight);
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+.discaya h2 {
+  font-size: var(--type-base);
+  flex: 1;
+  text-align: right;
+  font-family: "Futura Hv";
+}
+
+.discaya .card {
+  background-color: #ece1cc;
+  padding: 1.5em;
+}
+
+.discaya .card > div {
+  font-family: "Futura Hv";
+}
+
+.discaya .card > div h3 {
+  font-size: var(--type-lg);
+}
+
+.discaya .display {
+  display: flex;
+  gap: 1em;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 2em;
+  align-items: end;
+}
+
+.discaya .content {
+  padding-top: 3em;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2em;
+  max-width: 66em;
+  margin: auto;
+  align-items: start;
+}
+
+.discaya .content p {
+  line-height: 2;
+}

@@ -1,0 +1,109 @@
+header {
+  background: url("../images/dpwh 1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+header section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2000;
+  background: url("../images/Rectangle 10.svg") no-repeat center/cover;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content p {
+  font-size: var(--type-lg);
+  color: var(--base-white);
+  z-index: 1222000;
+}
+
+header .hero-content::before {
+  content: "";
+  opacity: 93%;
+  position: absolute;
+  background: url("../images/Frame 2.png") no-repeat center/contain;
+  left: 0;
+  bottom: 0;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 65em;
+  transform: translate(0%, 4%);
+}
+
+.hero-content .ph {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  top: 20px;
+  mix-blend-mode: difference;
+}
+
+.hero-content .stripes {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  mix-blend-mode: hard-light;
+  z-index: 2000;
+}
+
+header .hero-content::after {
+  content: "";
+  opacity: 85%;
+  position: absolute;
+  background: url("../images/Frame 1.png") no-repeat center/contain;
+  right: 0;
+  bottom: 0;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 46em;
+  transform: translate(0%, 4%);
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 58em; /* Full viewport height */
+  box-sizing: border-box; /* Include padding in height calculation */
+  overflow: hidden;
+  padding-bottom: 3.3em;
+}
+header h1 {
+  font-size: var(--type-4xl);
+  font-family: "Beni Black";
+  text-transform: uppercase;
+  color: var(--base-white);
+  text-align: center;
+  line-height: 0.8;
+  max-width: 1060px;
+  position: relative;
+  z-index: 1000;
+  display: inline-block; /* shrink-wrap around the text */
+}
+
+.hero-content h1::before,
+.hero-content h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 13%;
+  background: url("../images/santanas with effect.png") no-repeat center/contain;
+  pointer-events: none;
+}
+
+.hero-content h1::before {
+  left: 0; /* stick to left edge of the text box */
+  transform: translate(13%, -62%) rotate(-20deg);
+}
+
+.hero-content h1::after {
+  right: 0; /* stick to right edge of the text box */
+  transform: translate(-13%, -62%) scaleX(-1) rotate(-20deg);
+}

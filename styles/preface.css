@@ -1,0 +1,69 @@
+.preface {
+  background-color: #1a1816;
+  color: var(--base-white);
+  overflow: hidden;
+}
+
+.preface .content {
+  max-width: 80em;
+  padding: 10em 0;
+  margin: auto;
+}
+
+.preface h1 {
+  font-family: "Impact";
+  font-size: var(--type-3xl);
+  line-height: var(--leading-tight);
+}
+
+.preface h2 {
+  font-family: "Futura Md";
+  font-size: var(--type-lg);
+  margin-top: 0.5em;
+  max-width: 20em;
+}
+.preface h2 > span {
+  font-family: "Futura Hv";
+}
+
+.preface p {
+  line-height: 2;
+  max-width: 45em;
+  padding-top: 20em;
+  margin-left: auto;
+  position: relative;
+}
+
+.preface p::after {
+  content: "";
+  position: absolute;
+  top: -10em;
+  right: -10%;
+  aspect-ratio: 1 / 1; /* keep it square */
+  width: 80%;
+  background: url("../images/flood gallery 1.png") no-repeat center/contain;
+}
+
+.preface .source {
+  display: block;
+  margin-top: 1em;
+  font-size: var(--type-sm);
+  font-style: italic;
+  opacity: 0.5;
+}
+
+.preface {
+  position: relative;
+  z-index: 100;
+}
+
+.preface::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: contain;
+  background: url("../images/flood bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
