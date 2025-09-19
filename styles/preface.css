@@ -41,7 +41,7 @@
   right: -10%;
   aspect-ratio: 1 / 1; /* keep it square */
   width: 80%;
-  background: url("../images/flood gallery 1.png") no-repeat center/contain;
+  background: url("../images/flood gallery 1.png") no-repeat center/cover;
 }
 
 .preface .source {

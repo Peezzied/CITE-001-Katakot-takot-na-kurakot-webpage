@@ -13,3 +13,5 @@ function changeColor() {
 
 const button = document.getElementById("interactable");
 button.addEventListener("click", changeColor);
+
+changeColor();

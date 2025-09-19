@@ -29,34 +29,112 @@
   width: 77em;
   height: 77em;
   transform: translate(-12%, -8%);
-  /* mix-blend-mode: color-dodge; */
+  mix-blend-mode: color-dodge;
   background: url("../images/throne half.png") no-repeat center/contain;
 }
 
 .upuan .head {
-  max-width: 67em;
+  max-width: 70em;
   margin: auto;
   position: relative;
   z-index: 100;
 }
 
-.upuan::before {
+.upuan .head::before {
   content: "";
   position: absolute;
   background: url("../images/congress bg.png") no-repeat center/contain;
-  transform: scale(1.2) translateY(15%);
-  inset: 0;
+  transform: scale(1.2) translateY(15%) translateX(-11%);
+  top: 0;
+  overflow: visible;
+  z-index: -1;
+  width: 92em;
+  height: 92em;
 }
 
 .upuan .head p {
-    color: var(--base-white);
-    line-height: 2;
-    margin-top: 4em;
-    max-width: 50em;
+  color: var(--base-white);
+  margin-top: 4em;
+  max-width: 50em;
 }
 
 .upuan {
-    position: relative;
-    background-color: black;
+  margin-top: 18em;
+  position: relative;
+  background-color: black;
   display: grid;
+  padding-bottom: 23em;
 }
+
+.upuan .baha {
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  max-width: 70em;
+  color: var(--base-white);
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  margin-top: 15em;
+}
+
+.upuan .baha h1 {
+  font-size: var(--type-3xl);
+  font-family: "Impact";
+  text-align: center;
+}
+
+.upuan .baha > div {
+  display: flex;
+  gap: 1.5em;
+  padding-inline: 4em;
+  max-height: 23em;
+}
+
+.upuan .baha p:first-of-type {
+  padding-inline: 4em;
+}
+.upuan .baha p:last-of-type {
+  padding-inline: 4em;
+}
+
+.upuan .baha > div img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vico {
+  margin-top: 10em;
+}
+
+.vico div:first-of-type {
+  width: 90em;
+  margin: auto;
+  position: relative;
+}
+
+.vico h1 {
+  text-align: right;
+}
+
+.vico p {
+  margin-top: 2em;
+  text-align: right;
+  margin-left: auto;
+  max-width: 60em;
+}
+
+.vico div:last-of-type {
+  max-width: 70em;
+  margin: auto;
+}
+
+/* .vico div:before {
+  content: "";
+  position: absolute;
+  width: 75em;
+  height: 75em;
+  left: -51em;
+  background: url("../images/politics.png") no-repeat center/contain;
+} */

@@ -86,3 +86,23 @@ button:active {
 main {
   overflow: hidden;
 }
+
+.padding-inline-1 {
+  padding-inline: 4em;
+}
+
+.line-height-1 {
+  line-height: var(--leading-tight);
+}
+.line-height-2 {
+  line-height: 2;
+}
+
+.text-head {
+  font-fa: "Impact";
+  font-size: var(--type-3xl);
+}
+
+.text-white {
+  color: var(--base-white);
+}
