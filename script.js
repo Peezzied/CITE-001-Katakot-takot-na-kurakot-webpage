@@ -1,4 +1,4 @@
-const colorChangeBoundSection = document.querySelectorAll("#colorChangeBound");
+const colorChangeBoundSection = document.querySelectorAll(".colorChangeBound");
 
 function changeColor() {
     const colors = ["#1a1816", "#282518", "#282c1d", "#212828"]

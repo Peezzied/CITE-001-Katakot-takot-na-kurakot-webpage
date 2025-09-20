@@ -37,6 +37,13 @@
   padding-top: 5em;
   width: 66em;
 }
+.action .head img:first-of-type {
+  position: relative;
+  z-index: 1;
+}
+.action .head img:last-of-type {
+  scale: 1.6;
+}
 .action .intro {
   padding-top: 1em;
   max-width: 40em;
@@ -62,21 +69,43 @@
 }
 
 .actions {
+  max-width: 72em;
+  margin: auto;
   padding-top: 7em;
   display: flex;
   flex-direction: column;
-  gap: 6em;
+  gap: 8em;
+  margin-top: 10em;
 }
 
 .action .action-1,
 .action .action-2,
 .action .action-3 {
-  margin: auto;
-  max-width: 60em;
+  /* margin: auto; */
+}
+
+.action .action-1 > div,
+.action .action-2 > div,
+.action .action-3 > div {
+  display: flex;
+  flex-direction: row;
+}
+
+.action .action-1 > div > img,
+.action .action-3 > div > img {
+  opacity: 0.6;
+  margin-top: -10em;
+  transform: translateX(22%);
+}
+
+.action .action-2 > div > img {
+  margin-top: -3em;
+  opacity: 0.6;
+  transform: translateX(-32%);
 }
 
 .action .action-1 p,
 .action .action-2 p,
 .action .action-3 p {
-  line-height: 2;
+  max-width: 50em;
 }

@@ -4,21 +4,41 @@
   overflow: hidden;
 }
 
+.preface::before {
+  content: "";
+  /* mix-blend-mode: difference; */
+  position: absolute;
+  background: url("../images/dark cloud.png") no-repeat -30em -17em/contain, url("../images/dark cloud.png") no-repeat 55em -25em/contain;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100em;
+}
+
 .preface .content {
-  max-width: 80em;
+  max-width: 85em;
   padding: 10em 0;
   margin: auto;
+}
+.preface .content::before {
+    content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: url("../images/Rectangle 10.svg") no-repeat center/cover;
 }
 
 .preface h1 {
   font-family: "Impact";
-  font-size: var(--type-3xl);
+  font-size: var(--type-4xl);
   line-height: var(--leading-tight);
+  position: relative;
+  z-index: 10;
 }
 
 .preface h2 {
   font-family: "Futura Md";
-  font-size: var(--type-lg);
+  font-size: var(--type-xl);
   margin-top: 0.5em;
   max-width: 20em;
 }
@@ -29,19 +49,20 @@
 .preface p {
   line-height: 2;
   max-width: 45em;
-  padding-top: 20em;
+  padding-top: 30em;
   margin-left: auto;
   position: relative;
+  z-index: 10;
 }
 
-.preface p::after {
+.preface p::before {
   content: "";
   position: absolute;
-  top: -10em;
+  top: 0;
   right: -10%;
   aspect-ratio: 1 / 1; /* keep it square */
   width: 80%;
-  background: url("../images/flood gallery 1.png") no-repeat center/cover;
+  background: url("../images/flood gallery 1.png") no-repeat center/contain;
 }
 
 .preface .source {
@@ -49,7 +70,9 @@
   margin-top: 1em;
   font-size: var(--type-sm);
   font-style: italic;
-  opacity: 0.5;
+  opacity: 0.87;
+  position: relative;
+  z-index: 10;
 }
 
 .preface {
@@ -63,7 +86,7 @@
   inset: 0;
   z-index: -1;
   background-size: contain;
-  background: url("../images/flood bg.png");
+  background: url("../images/flood bg.png") no-repeat center/cover;
   background-repeat: no-repeat;
   background-position: center;
 }

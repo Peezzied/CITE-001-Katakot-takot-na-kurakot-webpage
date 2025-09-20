@@ -42,7 +42,7 @@
   --type-xxs: 0.236rem; /* ~3.78px  */
   --type-xs: 0.382rem; /* ~6.11px  */
   --type-sm: 0.618rem; /* ~9.89px  */
-  --type-base: 1rem; /* 16px    */
+  --type-base: 16px; /* 16px    */
   --type-lg: 1.618rem; /* ~25.89px*/
   --type-xl: 2.618rem; /* ~41.89px*/
   --type-2xl: 4.236rem; /* ~67.78px*/

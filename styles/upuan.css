@@ -109,7 +109,7 @@
 }
 
 .vico div:first-of-type {
-  width: 90em;
+  max-width: 90em;
   margin: auto;
   position: relative;
 }
