@@ -9,6 +9,10 @@
   padding-top: 1em;
 }
 
+.upuan .head h1 span {
+  background-color: var(--accent);
+}
+
 .upuan .head .throne img {
   width: 57em;
   margin-top: -15em;
@@ -48,6 +52,7 @@
   top: 0;
   overflow: visible;
   z-index: -1;
+  opacity: .7;
   width: 92em;
   height: 92em;
 }
@@ -84,18 +89,15 @@
   text-align: center;
 }
 
+.upuan .baha h1 span {
+  background-color: var(--accent);
+}
+
 .upuan .baha > div {
   display: flex;
   gap: 1.5em;
   padding-inline: 4em;
   max-height: 23em;
-}
-
-.upuan .baha p:first-of-type {
-  padding-inline: 4em;
-}
-.upuan .baha p:last-of-type {
-  padding-inline: 4em;
 }
 
 .upuan .baha > div img {
@@ -116,6 +118,24 @@
 
 .vico h1 {
   text-align: right;
+  position: relative;
+  font-family: "Impact";
+}
+
+.vico h1 span {
+  background-color: var(--accent);
+}
+
+.vico h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 1em;
+  height: 1em;
+  transform: scaleX(-1) translateX(-30%);
+  mask: url("../images/quote mark.svg") no-repeat center/contain;
+
+  background-color: var(--base-white); /* sets the color */
 }
 
 .vico p {

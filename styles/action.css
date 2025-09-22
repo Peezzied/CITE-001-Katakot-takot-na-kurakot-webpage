@@ -12,6 +12,19 @@
   font-family: "Impact";
   line-height: 1.1;
 }
+
+.action .head .title h1:nth-child(1) span {
+  background-color: var(--accent);
+}
+
+.action .head .title h1:nth-child(2) {
+  opacity: .7;
+}
+
+.action .head .title h1:nth-child(3) {
+  opacity: .5;
+}
+
 .action .head h2 {
   font-size: var(--type-lg);
 }
@@ -41,6 +54,7 @@
   position: relative;
   z-index: 1;
 }
+
 .action .head img:last-of-type {
   scale: 1.6;
 }

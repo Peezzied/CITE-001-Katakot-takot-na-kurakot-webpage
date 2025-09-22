@@ -15,3 +15,18 @@ const button = document.getElementById("interactable");
 button.addEventListener("click", changeColor);
 
 changeColor();
+
+
+  const aside = document.getElementById("floatingAside");
+
+  window.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+
+    if (scrollPosition >= pageHeight) {
+      // at bottom
+      aside.classList.add("hidden");
+    } else {
+      aside.classList.remove("hidden");
+    }
+  });

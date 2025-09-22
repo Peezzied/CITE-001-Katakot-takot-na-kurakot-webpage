@@ -34,7 +34,7 @@
 
 @font-face {
   font-family: "Impact";
-  src: url("fonts/Impact.ttf") format("truetype");
+  src: url("fonts/Impact.woff2") format("woff2");
   font-display: swap; /* improves loading behavior */
 }
 
@@ -54,6 +54,8 @@
   --leading-normal: 1.45;
 
   --base-white: #fffbf7;
+
+  --accent: #ee4040;            
 }
 
 body {
@@ -63,7 +65,7 @@ body {
 }
 
 button {
-  background-color: #ee4040;
+  background-color: var(--accent);
   font-family: "Futura Md";
   border: none;
   position: fixed;
@@ -76,6 +78,15 @@ button {
   margin: 2em;
   transition: transform 0.15s ease;
   box-shadow: -1px 9px 36px -9px rgba(0, 0, 0, 0.41);
+}
+#floatingAside {
+  transition: opacity .4s ease;
+  pointer-events: auto;
+}
+#floatingAside.hidden {
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
 }
 
 button:active {
@@ -99,10 +110,24 @@ main {
 }
 
 .text-head {
-  font-fa: "Impact";
+  font-family: "Impact";
   font-size: var(--type-3xl);
 }
 
 .text-white {
   color: var(--base-white);
+}
+
+footer {
+  background-color: #0d0800;
+  padding: 2em;
+  color: var(--base-white);
+  display: flex;
+  justify-content: space-between;
+  font-family: "Futura Hv";
+}
+
+footer p,
+footer h1 {
+  font-size: var(--type-base);
 }

@@ -7,15 +7,35 @@
 .infographic .quote blockquote {
   font-family: "Impact";
   font-size: var(--type-2xl);
-  position: relative;
   line-height: var(--leading-tight);
 }
-.infographic .quote blockquote::before {
+
+.infographic .quote blockquote strong {
+  position: relative;
+
+}
+
+.infographic .quote blockquote strong span {
+  color: var(--base-white);
+  position: relative;
+}
+
+.infographic .quote blockquote strong span::before {
   content: "";
   position: absolute;
-  aspect-ratio: 1 / 1; /* keep it square */
-  width: 7%;
-  left: -10%;
+  background-color: var(--accent);
+  inset: 0;
+  z-index: -1;
+  padding-inline: 3em;
+  transform: translateX(-4%);
+}
+
+.infographic .quote blockquote strong::before {
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  left: -24%;
   background: url("/images/quote mark.svg") no-repeat center/contain;
 }
 
@@ -102,14 +122,31 @@
 .infographic .profile h3 {
   font-size: var(--type-xl);
   text-align: center;
+    display: inline-block;
+    font-family: "Futura Hv";
+  transform: skew(20deg);  
+}
+
+.infographic .profile div div {
+  margin-top: 1em;
+    display: block;
+  padding: .6em 1.2em;
+  line-height: var(--leading-tight);
+  background: var(--base-white);       /* parallelogram color */
+  transform: skew(-20deg);   /* slant the box */
+  color: black;
+  margin-inline: auto;
+  width: fit-content;
 }
 
 .infographic .profile ul li {
+  font-family: "Futura Md";
   list-style-type: none;
 }
 
 .infographic .profile ul {
   display: flex;
+  margin-top: .5em;
   justify-content: center;
   gap: 1em;
   padding: 0;
