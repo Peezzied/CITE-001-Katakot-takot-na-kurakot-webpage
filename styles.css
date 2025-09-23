@@ -10,31 +10,41 @@
 
 @font-face {
   font-family: "Futura Hv";
-  src: url("fonts/Futura Heavy font.ttf") format("truetype");
-  font-display: swap; /* improves loading behavior */
+  src: url("fonts/futurastd-heavy-webfont.woff2") format("woff2"),
+    url("fonts/futurastd-heavy-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Futura Md";
-  src: url("fonts/futura medium bt.ttf") format("truetype");
-  font-display: swap; /* improves loading behavior */
+  src: url("fonts/futurastd-medium-webfont.woff2") format("woff2"),
+    url("fonts/futurastd-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Beni Black";
-  src: url("fonts/BeniBlack.ttf") format("truetype");
-  font-display: swap; /* improves loading behavior */
+  src: local("Beni Black"), local("Beni-Black"),
+    url("fonts/BeniBlack.woff2") format("woff2"),
+    url("fonts/BeniBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Beni Bold";
-  src: url("fonts/BeniBold.ttf") format("truetype");
-  font-display: swap; /* improves loading behavior */
+  src: local("Beni Bold"), local("Beni-Bold"),
+    url("fonts/BeniBold.woff2") format("woff2"),
+    url("fonts/BeniBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Impact";
-  src: url("fonts/Impact.woff2") format("woff2");
+  src: url("fonts/Impact.ttf") format("truetype");
   font-display: swap; /* improves loading behavior */
 }
 
@@ -54,14 +64,23 @@
   --leading-normal: 1.45;
 
   --base-white: #fffbf7;
+  --base-white-muted: #cfcac5;
+  --base-black: #1a1816;
+  --accent: #ee4040;
+}
 
-  --accent: #ee4040;            
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: var(--type-base);
   font-family: "Merriweather", serif;
   background-color: #ecdfcc;
+}
+
+p {
+  margin-top: 0.6em;
 }
 
 button {
@@ -74,18 +93,18 @@ button {
   z-index: 99999;
   padding: 0.5em;
   cursor: pointer;
-  color: #ecdfcc;
+  color: var(--base-white);
   margin: 2em;
   transition: transform 0.15s ease;
   box-shadow: -1px 9px 36px -9px rgba(0, 0, 0, 0.41);
 }
 #floatingAside {
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
   pointer-events: auto;
 }
 #floatingAside.hidden {
   opacity: 0;
-  transition: opacity .4s ease;
+  transition: opacity 0.4s ease;
   pointer-events: none;
 }
 
@@ -117,6 +136,9 @@ main {
 .text-white {
   color: var(--base-white);
 }
+.text-black {
+  color: var(--base-black);
+}
 
 footer {
   background-color: #0d0800;
@@ -125,9 +147,31 @@ footer {
   display: flex;
   justify-content: space-between;
   font-family: "Futura Hv";
+  align-items: center;
 }
 
-footer p,
+footer span,
 footer h1 {
   font-size: var(--type-base);
+}
+
+footer span:first-of-type {
+  font-size: 14px;
+  display: flex;
+  gap: .7em;
+  align-items: center;
+}
+
+.futura-md {
+  font-family: "Futura Md";
+}
+
+.reference {
+  color: inherit;
+  transition: color 200ms;
+  
+}
+
+.reference:hover {
+  color: var(--accent);
 }

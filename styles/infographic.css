@@ -27,7 +27,7 @@
   inset: 0;
   z-index: -1;
   padding-inline: 3em;
-  transform: translateX(-4%);
+  transform: translateX(-3%);
 }
 
 .infographic .quote blockquote strong::before {
@@ -35,8 +35,14 @@
   position: absolute;
   width: 1em;
   height: 1em;
-  left: -24%;
-  background: url("/images/quote mark.svg") no-repeat center/contain;
+  left: -20%;
+  mask: url("../images/quote mark.svg") no-repeat center/contain;
+
+  background-color: var(--base-black);
+}
+
+.infographic .quote p {
+  font-family: "Futura Hv";
 }
 
 .infographic {
@@ -72,7 +78,7 @@
 }
 
 .infographic .summary .card > div p {
-  font-family: "Futura Md";
+  font-family: "Futura Hv";
 }
 
 .infographic .summary img {

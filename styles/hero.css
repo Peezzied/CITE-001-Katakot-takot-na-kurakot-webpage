@@ -20,10 +20,12 @@ header section::before {
   flex-direction: column;
 }
 
-.hero-content p {
+.hero-content .text p {
   font-size: var(--type-lg);
   color: var(--base-white);
   z-index: 1222000;
+  width: fit-content;
+  margin: auto;
 }
 
 header .hero-content::before {
@@ -76,7 +78,8 @@ header .hero-content::after {
   overflow: hidden;
   padding-bottom: 3.3em;
 }
-header h1 {
+header .text h1 {
+  text-shadow: 3px 2px 4px rgba(0, 0, 0, 0.17);
   font-size: var(--type-4xl);
   font-family: "Beni Black";
   text-transform: uppercase;
@@ -89,8 +92,63 @@ header h1 {
   display: inline-block; /* shrink-wrap around the text */
 }
 
-.hero-content h1::before,
-.hero-content h1::after {
+header .hero-content .text {
+  position: relative;
+}
+header .hero-content .rectangle-2,
+header .hero-content .rectangle-1 {
+  width: 20em;
+  height: 6em;
+  background-color: #D9D9D9;
+  position: absolute;
+  top:65%;
+  right: 3em;
+  mix-blend-mode: exclusion;
+  z-index: 2000;
+}
+
+header .hero-content .rectangle-2 {
+  left: 2.5em;
+  top: 20%;
+  height: 5em;
+  width: 16em;
+}
+header .hero-content .rectangle-4,
+header .hero-content .rectangle-3 {
+    width: 8em;
+  height: 2em;
+  background-color: #D9D9D9;
+  position: absolute;
+  top:40%;
+  right: -4em;
+  mix-blend-mode: difference;
+  z-index: 2000;
+}
+
+header .hero-content .rectangle-4 {
+  left: -3em;
+  top: 55%;
+  height: 1em;
+  width: 12em;
+}
+
+header .hero-content .rectangle-5 {
+    width: 6em;
+  height: 1em;
+  background-color: #D9D9D9;
+  position: absolute;
+  top:5%;
+  left: -6em;
+  mix-blend-mode: difference;
+  z-index: 2000;
+}
+
+header .text h1 span {
+  font-family: "Beni Bold";
+}
+
+.hero-content .text h1::before,
+.hero-content .text h1::after {
   content: "";
   position: absolute;
   top: 0;
@@ -100,12 +158,12 @@ header h1 {
   pointer-events: none;
 }
 
-.hero-content h1::before {
+.hero-content .text h1::before {
   left: 0; /* stick to left edge of the text box */
   transform: translate(13%, -62%) rotate(-20deg);
 }
 
-.hero-content h1::after {
+.hero-content .text h1::after {
   right: 0; /* stick to right edge of the text box */
   transform: translate(-13%, -62%) scaleX(-1) rotate(-20deg);
 }

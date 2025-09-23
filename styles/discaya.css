@@ -21,24 +21,25 @@
 
 .discaya h1 {
   font-family: "Impact";
-  /* padding-top: 1em;
-    padding-bottom: 4em; */
   font-size: var(--type-2xl);
   max-width: 10em;
   line-height: var(--leading-tight);
   grid-row: 1;
   grid-column: 1 / -1;
+  position: relative;
+  z-index: 30;
 }
 
 .discaya .head .display h1 span {
   position: relative;
   color: var(--base-white);
-  z-index: 22;
 }
 .discaya .head .display h1 span::before {
   content: "";
   position: absolute;
   inset: 0;
+  padding-inline: 2em;
+  transform: translateX(-3%);
   z-index: -1;
   background-color: var(--accent);
 }
@@ -46,6 +47,7 @@
   font-size: var(--type-base);
   flex: 1;
   text-align: right;
+  opacity: 0.86;
   font-family: "Futura Hv";
 }
 

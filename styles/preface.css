@@ -2,6 +2,17 @@
   background-color: #1a1816;
   color: var(--base-white);
   overflow: hidden;
+  position: relative;
+}
+
+.preface video {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: .6;
 }
 
 .preface::before {
@@ -34,6 +45,39 @@
   line-height: var(--leading-tight);
   position: relative;
   z-index: 10;
+  text-shadow: 3px 2px 7px rgba(0, 0, 0, 0.17);
+}
+
+.preface h1 > span {
+  position: relative;
+}
+.preface h1 > span span:nth-child(1),
+.preface h1 > span span:nth-child(2),
+.preface h1 > span span:nth-child(3) {
+  position: absolute;
+  color: #408bee;
+  opacity: .6;
+}
+
+.preface h1 > span span:nth-child(1) {
+  animation: wave 3s ease-in-out infinite;
+}
+.preface h1 > span span:nth-child(2) {
+  animation: wave 2s ease-in-out infinite;
+  opacity: .3;
+}
+.preface h1 > span span:nth-child(3) {
+  animation: wave 6s ease-in infinite;
+  opacity: .5;
+}
+
+@keyframes wave {
+  0%, 100% {
+    clip-path: polygon(0% 46%, 16% 45%, 34% 52%, 50% 61%, 68% 65%, 85% 61%, 100% 53%, 100% 100%, 0% 100%);
+  }
+  50% {
+    clip-path: polygon(0 59%, 18% 67%, 36% 70%, 51% 66%, 66% 56%, 82% 49%, 100% 45%, 100% 100%, 0% 100%);
+  }
 }
 
 .preface h2 {

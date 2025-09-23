@@ -1,6 +1,5 @@
 .upuan .head h1 {
   font-family: "Impact";
-  color: var(--base-white);
   font-size: var(--type-3xl);
   line-height: var(--leading-tight);
   max-width: 12em;
@@ -57,10 +56,9 @@
   height: 92em;
 }
 
-.upuan .head p {
-  color: var(--base-white);
+.upuan .head > .paragraphs {
   margin-top: 4em;
-  max-width: 50em;
+  max-width: 60em;
 }
 
 .upuan {
@@ -76,7 +74,6 @@
   z-index: 10;
   margin: auto;
   max-width: 70em;
-  color: var(--base-white);
   display: flex;
   flex-direction: column;
   gap: 3em;
@@ -93,17 +90,26 @@
   background-color: var(--accent);
 }
 
-.upuan .baha > div {
+.upuan .baha > .mga-pera {
   display: flex;
   gap: 1.5em;
   padding-inline: 4em;
   max-height: 23em;
 }
 
-.upuan .baha > div img {
+.upuan .baha > .mga-pera figure,
+.upuan .baha > .mga-pera img {
   width: 100%;
   object-fit: cover;
   display: block;
+}
+
+.upuan .baha > .mga-pera figure img {
+  height: 100%;
+}
+.upuan .baha > .mga-pera figure figcaption {
+  font-size: var(--type-sm);
+  color: var(--base-white-muted);
 }
 
 .vico {
@@ -135,18 +141,22 @@
   transform: scaleX(-1) translateX(-30%);
   mask: url("../images/quote mark.svg") no-repeat center/contain;
 
-  background-color: var(--base-white); /* sets the color */
+  background-color: var(--base-white);
 }
 
-.vico p {
+.vico div:last-of-type .paragraphs {
   margin-top: 2em;
   text-align: right;
+}
+
+.vico div:last-of-type .paragraphs p {
+  
   margin-left: auto;
   max-width: 60em;
 }
 
 .vico div:last-of-type {
-  max-width: 70em;
+  max-width: 72em;
   margin: auto;
 }
 

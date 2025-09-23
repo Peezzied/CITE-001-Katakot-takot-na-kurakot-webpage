@@ -18,11 +18,11 @@
 }
 
 .action .head .title h1:nth-child(2) {
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .action .head .title h1:nth-child(3) {
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .action .head h2 {
@@ -69,6 +69,7 @@
 .action .action-2 h1,
 .action .action-3 h1 {
   font-size: var(--type-xl);
+  opacity: 0.9;
   font-family: "Impact";
   line-height: var(--leading-tight);
   margin-bottom: 0.5em;
@@ -107,14 +108,14 @@
 
 .action .action-1 > div > img,
 .action .action-3 > div > img {
-  opacity: 0.6;
+  opacity: 0.8;
   margin-top: -10em;
   transform: translateX(22%);
 }
 
 .action .action-2 > div > img {
   margin-top: -3em;
-  opacity: 0.6;
+  opacity: 0.8;
   transform: translateX(-32%);
 }
 
